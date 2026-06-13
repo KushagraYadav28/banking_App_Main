@@ -8,7 +8,11 @@ const issytemUserRoute = require('./routes/isSystmeUser')
 const cors = require('cors');
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://192.168.1.112:5173'],
+  origin: [
+    'http://localhost:5173',
+    'http://192.168.1.112:5173',
+    'https://banking-app-main.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
