@@ -10,8 +10,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'http://192.168.1.112:5173',
-    'https://banking-app-main.vercel.app'
+    'https://banking-app-main-mu.vercel.app/'
   ],
   credentials: true
 }));
