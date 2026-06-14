@@ -9,7 +9,7 @@ async function sendEmail(to, subject, text) {
     }
 
     const response = await resend.emails.send({
-      from: "onboarding@resend.dev", // change after domain verification
+      from: "Vault Banking <noreply@vaultbanking.in>", // change after domain verification
       to,
       subject,
       text,
