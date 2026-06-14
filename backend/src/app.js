@@ -10,7 +10,9 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://banking-app-main-mu.vercel.app/'
+    'https://banking-app-main-mu.vercel.app/',
+    'banking-app-main-9e46bv1xc-kushagra-s-projects8.vercel.app',
+    'banking-app-main-git-main-kushagra-s-projects8.vercel.app'
   ],
   credentials: true
 }));
