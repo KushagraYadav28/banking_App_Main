@@ -48,9 +48,9 @@ async function otpController(req, res) {
 
     // Send OTP email
     try {
-      console.log("Generated OTP:", otp);
+      
 
-// await sendOtpMail(email, otp);
+      await sendOtpMail(email, otp);
     } catch (emailError) {
       console.error('Email sending failed:', emailError);
       return res.status(500).json({
