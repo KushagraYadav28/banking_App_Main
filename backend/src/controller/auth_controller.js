@@ -61,11 +61,12 @@ async function otpController(req, res) {
     });
 
   } catch (error) {
-    console.error('OTP Controller Error:', error);
-    return res.status(500).json({
-      message: 'Failed to process OTP request. Please try again.',
-    });
-  }
+  console.error('OTP Controller Error:', error);
+
+  return res.status(500).json({
+    error: error.message,
+  });
+}
 }
 
 async function registerUserController(req, res) {
