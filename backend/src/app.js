@@ -10,12 +10,17 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://banking-app-main-mu.vercel.app/',
-    'banking-app-main-9e46bv1xc-kushagra-s-projects8.vercel.app',
-    'banking-app-main-git-main-kushagra-s-projects8.vercel.app'
+    'https://banking-app-main-mu.vercel.app',
+    'https://banking-app-main-9e46bv1xc-kushagra-s-projects8.vercel.app',
+    'https://banking-app-main-git-main-kushagra-s-projects8.vercel.app'
   ],
   credentials: true
 }));
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
+
 app.use(express.json());
 app.use(cookieparser());
 app.use('/api/auth', authRouter);
